@@ -10,20 +10,23 @@
   </head>
   <body>
     <div class="container">
-      <div id="home-cnt">
-        <h3 class="home">HOME</h3>
-        <div class="score"><p id="home-score">0</p></div>
-        <button id="home-one" onclick="oneHome()">+1</button>
-        <button id="home-two" onclick="twoHome()">+2</button>
-        <button id="home-three" onclick="threeHome()">+3</button>
+      <div class="scoreboards">
+        <div id="home-cnt">
+          <h3 class="home">HOME</h3>
+          <div class="score"><p id="home-score">0</p></div>
+          <button id="home-one" onclick="oneHome()">+1</button>
+          <button id="home-two" onclick="twoHome()">+2</button>
+          <button id="home-three" onclick="threeHome()">+3</button>
+        </div>
+        <div id="guest-cnt">
+          <h3 class="guest">AWAY</h3>
+          <div class="score"><p id="guest-score">0</p></div>
+          <button id="guest-one" onclick="oneGuest()">+1</button>
+          <button id="guest-two" onclick="twoGuest()">+2</button>
+          <button id="guest-three" onclick="threeGuest()">+3</button>
+        </div>
       </div>
-      <div id="guest-cnt">
-        <h3 class="guest">AWAY</h3>
-        <div class="score"><p id="guest-score">0</p></div>
-        <button id="guest-one" onclick="oneGuest()">+1</button>
-        <button id="guest-two" onclick="twoGuest()">+2</button>
-        <button id="guest-three" onclick="threeGuest()">+3</button>
-      </div>
+      <button id="reset" onclick="reset()">RESET</button>
     </div>
     <script src="index.js"></script>
   </body>
