@@ -1,33 +1,42 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1b244a" />
+    <title>Basketball Scoreboard</title>
     <link rel="stylesheet" href="index.css" />
     <link
       href="https://fonts.cdnfonts.com/css/cursed-timer-ulil"
       rel="stylesheet"
     />
     <link href="https://fonts.cdnfonts.com/css/verdana" rel="stylesheet" />
-    <style></style>
   </head>
   <body>
-    <div class="container">
+    <main class="container" aria-label="Basketball scoreboard">
+      <h1 class="visually-hidden">Basketball scoreboard</h1>
       <div class="scoreboards">
-        <div id="home-cnt">
-          <h3 class="home">HOME</h3>
-          <div class="score"><p id="home-score">0</p></div>
-          <button id="home-one" onclick="oneHome()">+1</button>
-          <button id="home-two" onclick="twoHome()">+2</button>
-          <button id="home-three" onclick="threeHome()">+3</button>
-        </div>
-        <div id="guest-cnt">
-          <h3 class="guest">AWAY</h3>
-          <div class="score"><p id="guest-score">0</p></div>
-          <button id="guest-one" onclick="oneGuest()">+1</button>
-          <button id="guest-two" onclick="twoGuest()">+2</button>
-          <button id="guest-three" onclick="threeGuest()">+3</button>
-        </div>
+        <section class="team" aria-labelledby="home-heading">
+          <h2 id="home-heading">HOME</h2>
+          <div class="score"><p id="home-score" aria-live="polite" aria-atomic="true">0</p></div>
+          <div class="score-controls" role="group" aria-label="Add points to home">
+            <button onclick="oneHome()">+1</button>
+            <button onclick="twoHome()">+2</button>
+            <button onclick="threeHome()">+3</button>
+          </div>
+        </section>
+        <section class="team" aria-labelledby="guest-heading">
+          <h2 id="guest-heading">AWAY</h2>
+          <div class="score"><p id="guest-score" aria-live="polite" aria-atomic="true">0</p></div>
+          <div class="score-controls" role="group" aria-label="Add points to away">
+            <button onclick="oneGuest()">+1</button>
+            <button onclick="twoGuest()">+2</button>
+            <button onclick="threeGuest()">+3</button>
+          </div>
+        </section>
       </div>
       <button id="reset" onclick="reset()">RESET</button>
-    </div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
